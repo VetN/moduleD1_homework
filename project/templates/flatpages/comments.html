@@ -1,0 +1,16 @@
+
+{% extends 'flatpages/default.html'%}
+
+{%block content3%}
+<p style='color: red'> СВОЙ КОНТЕНТ3 cтраницы comments2  </p>
+{% endblock content3 %}
+
+{%block content1%}
+ СВОЙ КОНТЕНТ 1 
+{% endblock content1 %}
+
+{%block content2%}
+<p style='color: green'> в блоке можно поставить ссылку на контент с flatpage админки:
+{{flatpage.content}} 
+Повторим еще 2 раза: {{flatpage.content}}, {{flatpage.content}}</p>
+{% endblock content2 %}

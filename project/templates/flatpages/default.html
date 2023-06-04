@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+</head>
+<body>
+    <h1  style='color:red'>{{flatpage.title}}</h1>
+    <i> адрес страницы:  <span style='font-size: 26px'>{{flatpage.url}}</span></i>
+    <hr style='background-color:green; height:2px; width: 250px; margin-left:0'>
+    <ul>
+    <h3>МЕНЮ</h3>
+    <li><a href='/main'><h3  style='color:green'>main</h3> </a></li>    
+    <li><a href='/comments'> <h3  style='color:green'>comments</h3></a></li>
+    <li><a href='/comments_1'><h3  style='color:green'>comments_1</h3></a></li>
+    <li><a href='/comments_2'><h3  style='color:green'>comments_2</h3> </a></li>
+    <li><a href='/comments_3'><h3  style='color:green'>comments_3</h3> </a></li>
+    <li><a href='/about'> <h3  style='color:green'>about</h3></a></li>
+    </ul>
+    <hr style='background-color:green; height:2px; width: 250px; margin-left:0'>
+   
+    <hr style='background-color:purple; height:2px; width: 250px; margin-left:0'>
+    <i>здесь пишем контент записанный на flatpage:<p style='color: purple'>{{flatpage.content}}</p></i>   
+    <hr style='background-color:purple; height:2px; width: 250px; margin-left:0'>
+    
+    <hr style='background-color:blue; height:2px; width: 250px; margin-left:0'>
+    <h3 style='color:blue'>Текст записанный в блоках</h3>
+    
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+    <p style='color:blue'>текст блока  1</p>
+    <p style='color:blue'> 
+        {%block content1 %}
+        {% endblock content1 %}
+    </p>
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+    <p style='color:blue'>текст блока  2</p>
+    <p style='color:blue'>
+        {%block content2%}
+        {% endblock content2 %}
+    </p>
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+    
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+    <p style='color:blue'>текст блока  3</p>
+    <p style='color:blue'>
+        {%block content3%}
+        {% endblock content3 %}
+    </p>
+    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+   
+
+</body>
+</html>
