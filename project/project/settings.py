@@ -127,3 +127,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
+
+# добавили библиотеку bootstrap
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]

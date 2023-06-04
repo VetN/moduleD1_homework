@@ -1,13 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
      <title>Document</title>
+     <link href=" {% static 'startbootstrap-bare-gh-pages/css/styles_1.css' %}" rel="stylesheet">
+    <link href=" {% static 'startbootstrap-bare-gh-pages/css/styles.css' %}" rel="stylesheet">
 </head>
 <body>
-    <h1  style='color:red'>{{flatpage.title}}</h1>
-    <i> адрес страницы:  <span style='font-size: 26px'>{{flatpage.url}}</span></i>
-    <hr style='background-color:green; height:2px; width: 250px; margin-left:0'>
-    <ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href='/main'>МОЙ САЙТ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/main">ГЛАВНАЯ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">О НАС</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="/comments" role="button" data-bs-toggle="dropdown" aria-expanded="false">КОММЕНТАРИИ</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/comments_1">КОММЕНТАРИИ 1</a></li>
+                            <li><a class="dropdown-item" href="/comments_1">КОММЕНТАРИИ 2</a></li>
+                            <li><a class="dropdown-item" href="/comments_1">КОММЕНТАРИИ 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container_1">      
+        <h1  style='color:red'>{{flatpage.title}}</h1>
+        <i> адрес страницы:  <span style='font-size: 26px'>{{flatpage.url}}</span></i>
+    </div>
+    <hr>
+    <ul class="container_2">
     <h3>МЕНЮ</h3>
     <li><a href='/main'><h3  style='color:green'>main</h3> </a></li>    
     <li><a href='/comments'> <h3  style='color:green'>comments</h3></a></li>
@@ -16,39 +42,48 @@
     <li><a href='/comments_3'><h3  style='color:green'>comments_3</h3> </a></li>
     <li><a href='/about'> <h3  style='color:green'>about</h3></a></li>
     </ul>
-    <hr style='background-color:green; height:2px; width: 250px; margin-left:0'>
-   
-    <hr style='background-color:purple; height:2px; width: 250px; margin-left:0'>
-    <i>здесь пишем контент записанный на flatpage:<p style='color: purple'>{{flatpage.content}}</p></i>   
-    <hr style='background-color:purple; height:2px; width: 250px; margin-left:0'>
-    
-    <hr style='background-color:blue; height:2px; width: 250px; margin-left:0'>
-    <h3 style='color:blue'>Текст записанный в блоках</h3>
-    
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
-    <p style='color:blue'>текст блока  1</p>
-    <p style='color:blue'> 
-        {%block content1 %}
-        {% endblock content1 %}
-    </p>
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+    <hr>
+    <hr>
+    <div class="photo" style="background-image: url('{% static 'images/blank-background.jpg' %}')" > 
+    <div class="container">
+        <div class="text-center">
+            
+            <h1> УЛУЧШАЕМ A Bootstrap 5</h1>
+            <i>здесь пишем контент записанный на flatpage:<p style='color: purple'>{{flatpage.content}}</p></i>   
+            <hr>
+            <hr>
+            <h3 style='color:#525f52'>Текст записанный в блоках</h3>
+            <hr>
+            <p>текст блока  1</p>
+            <p> 
+                {%block content1 %}
+                {% endblock content1 %}
+            </p>
+            <hr>
+            <hr>
+            <p >текст блока  2</p>
+            <p>
+                {%block content2%}
+                {% endblock content2 %}
+            </p>
+            <hr>
+            <hr>
+            <p>текст блока  3</p>
+            <p>
+                {%block content3%}
+                {% endblock content3 %}
+            </p>
+            <hr>
+            <hr>
+        </div>
+    </div>
 
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
-    <p style='color:blue'>текст блока  2</p>
-    <p style='color:blue'>
-        {%block content2%}
-        {% endblock content2 %}
-    </p>
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
+</div>
+
+    <hr>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'startbootstrap-bare-gh-pages/js/scripts.js' %}"></script>
     
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
-    <p style='color:blue'>текст блока  3</p>
-    <p style='color:blue'>
-        {%block content3%}
-        {% endblock content3 %}
-    </p>
-    <hr style='background-color:blue; height:0.5px; width: 150px; margin-left:0'>
-   
 
 </body>
 </html>
