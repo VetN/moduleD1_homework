@@ -1,4 +1,4 @@
-{% load static %}
+
 .container_1 {
     background-color: #dedad6;
     padding: 10px;
@@ -25,8 +25,9 @@ opacity: 0.9;
 }
 .photo {
    background-position: center;
-   background-size: 100%;
-   padding: 20px;
+   background-repeat: no-repeat;
+   background-size: 120%;
+   padding: 10px;
     width: 100%;
 
 }
