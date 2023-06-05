@@ -8,7 +8,7 @@
     padding: 50px;
     margin-bottom: 0;
 }
-hr, .container hr {
+hr {
 background-color:#525f52; 
 height:7px;
 margin: 1px;
@@ -24,11 +24,11 @@ opacity: 0.9;
     color:#525f52
 }
 .photo {
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: 120%;
-   padding: 10px;
-    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    padding: 10px;
+   
 
 }
 /*style="background-image: url('{% static 'images/blank-background.jpg' %}'); width=100%"
